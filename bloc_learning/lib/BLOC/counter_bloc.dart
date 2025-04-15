@@ -11,11 +11,7 @@ class counter_Decrement extends Counterstate {}
 class Counter_Bloc extends Bloc<Counterstate, int> {
   Counter_Bloc() : super(0) {
     on<counter_Increment>((event, emit) {
-      
       emit(state + 1);
-      if (state > 9) {
-        print(state);
-      }
     });
 
     on<counter_Decrement>((event, emit) {
